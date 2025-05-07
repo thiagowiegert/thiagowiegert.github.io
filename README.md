@@ -1,1 +1,1 @@
-# GitHub oficial de Minecraft Free
+# GitHub oficial de Thiago Wiegert
