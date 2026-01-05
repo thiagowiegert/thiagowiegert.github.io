@@ -37,7 +37,7 @@
     }
 
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
       text-align: center;
@@ -58,18 +58,41 @@
     .card {
       background-color: #161b22;
       padding: 25px;
-      border-radius: 10px;
+      border-radius: 12px;
       margin-top: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,.3);
+    }
+
+    .btc-item {
+      background-color: #0d1117;
+      border: 1px solid #30363d;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 15px;
+      text-align: left;
     }
 
     .btc-address {
-      background-color: #0d1117;
-      padding: 15px;
-      border-radius: 8px;
-      word-break: break-all;
       font-family: monospace;
+      word-break: break-all;
       color: #45b549;
-      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 0.95em;
+    }
+
+    .copy-btn {
+      background-color: #45b549;
+      border: none;
+      color: #000;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .copy-btn:hover {
+      opacity: 0.85;
     }
 
     footer {
@@ -92,124 +115,87 @@
 </head>
 <body>
 
-  <header>
-    <h1>Apoya mi trabajo 💚</h1>
-    <p>Tu donación me ayuda a seguir creando proyectos y aprendiendo</p>
-  </header>
+<header>
+  <h1>Apoya mi trabajo 💚</h1>
+  <p>Tu donación me ayuda a seguir creando proyectos y aprendiendo</p>
+</header>
 
-  <main>
+<main>
 
-    <section>
-      <h2>☕ Donar con Ko-fi</h2>
-      <div class="card">
-        <p>Puedes apoyarme fácilmente usando Ko-fi:</p>
-        <br>
+  <!-- KO-FI -->
+  <section>
+    <h2>☕ Donar con Ko-fi</h2>
+    <div class="card">
+      <p>Forma rápida y segura de apoyarme:</p><br>
 
-        <!-- Ko-fi Widget -->
-        <script src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script>
-        <script>
-          kofiwidget2.init(
-            'Support me on Ko-fi',
-            '#45b549',
-            'Z8Z81C0HWZ'
-          );
-          kofiwidget2.draw();
-        </script>
+      <script src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script>
+      <script>
+        kofiwidget2.init('Support me on Ko-fi', '#45b549', 'Z8Z81C0HWZ');
+        kofiwidget2.draw();
+      </script>
+    </div>
+  </section>
+
+  <!-- BITCOIN -->
+  <section>
+    <h2>₿ Donar con Bitcoin</h2>
+    <div class="card">
+      <p style="color:#8b949e">
+        Puedes usar cualquiera de las siguientes direcciones (Red BTC):
+      </p>
+
+      <div class="btc-item">
+        <div class="btc-address">bc1q45cmavzmqus6jtsjm7rhqs6n0vl5akhpw8yntn</div>
+        <button class="copy-btn" onclick="copyBTC(this)">Copiar</button>
       </div>
-    </section>
 
-    <section>
-      <h2>₿ Donar con Bitcoin</h2>
-      <div class="card">
-        <p>Puedes enviar Bitcoin a la siguiente dirección:</p>
-
-        <div class="btc-address">
-          bc1q45cmavzmqus6jtsjm7rhqs6n0vl5akhpw8yntn
-        </div>
-
-        <p style="margin-top: 15px; color:#8b949e;">
-          Bitcoin (BTC)
-        </p>
+      <div class="btc-item">
+        <div class="btc-address">bc1qsfn4uacfqkvw4uzr94v0vl7mxv7fsjyax33y6g</div>
+        <button class="copy-btn" onclick="copyBTC(this)">Copiar</button>
       </div>
-    </section>
 
-    <section>
-      <div class="card">
-        <div class="btc-address">
-          bc1qsfn4uacfqkvw4uzr94v0vl7mxv7fsjyax33y6g
-        </div>
-
-        <p style="margin-top: 15px; color:#8b949e;">
-          Bitcoin (BTC)
-        </p>
+      <div class="btc-item">
+        <div class="btc-address">bc1qwedjmcezhcwxulgtnc7722m6y0emsk38jwy3ee</div>
+        <button class="copy-btn" onclick="copyBTC(this)">Copiar</button>
       </div>
-    </section>
 
-    <section>
-      <div class="card">
-        <div class="btc-address">
-          bc1qwedjmcezhcwxulgtnc7722m6y0emsk38jwy3ee
-        </div>
-
-        <p style="margin-top: 15px; color:#8b949e;">
-          Bitcoin (BTC)
-        </p>
+      <div class="btc-item">
+        <div class="btc-address">bc1qz5dcxgmqw24etm5mj5jszjtpmrn4gs6ukf9ckn</div>
+        <button class="copy-btn" onclick="copyBTC(this)">Copiar</button>
       </div>
-    </section>
 
-    <section>
-      <div class="card">
-        <div class="btc-address">
-          bc1qz5dcxgmqw24etm5mj5jszjtpmrn4gs6ukf9ckn
-        </div>
-
-        <p style="margin-top: 15px; color:#8b949e;">
-          Bitcoin (BTC)
-        </p>
+      <div class="btc-item">
+        <div class="btc-address">bc1qeaz8dhgpchfpmkvlfs75cd58h88ddzcralv9pt</div>
+        <button class="copy-btn" onclick="copyBTC(this)">Copiar</button>
       </div>
-    </section>
 
-    <section>
-      <div class="card">
-        <div class="btc-address">
-          bc1qeaz8dhgpchfpmkvlfs75cd58h88ddzcralv9pt
-        </div>
-
-        <p style="margin-top: 15px; color:#8b949e;">
-          Bitcoin (BTC)
-        </p>
+      <div class="btc-item">
+        <div class="btc-address">bc1qlhcztnq5yt9e9xunkqshm2x978pcql2mdp0xh5</div>
+        <button class="copy-btn" onclick="copyBTC(this)">Copiar</button>
       </div>
-    </section>
 
-    <section>
-      <div class="card">
-        <div class="btc-address">
-          bc1qlhcztnq5yt9e9xunkqshm2x978pcql2mdp0xh5
-        </div>
-
-        <p style="margin-top: 15px; color:#8b949e;">
-          Bitcoin (BTC)
-        </p>
+      <div class="btc-item">
+        <div class="btc-address">bc1qz4dxwpwfhg6kurl00yu5vfg2gehuxm3mjfejq4</div>
+        <button class="copy-btn" onclick="copyBTC(this)">Copiar</button>
       </div>
-    </section>
 
-    <section>
-      <div class="card">
-        <div class="btc-address">
-          bc1qz4dxwpwfhg6kurl00yu5vfg2gehuxm3mjfejq4
-        </div>
+    </div>
+  </section>
 
-        <p style="margin-top: 15px; color:#8b949e;">
-          Bitcoin (BTC)
-        </p>
-      </div>
-    </section>
+</main>
 
-  </main>
+<footer>
+  <p>© 2025 - 2026 Thiago Wiegert — Gracias por tu apoyo ❤️</p>
+</footer>
 
-  <footer>
-    <p>© 2025 - 2026 Thiago Wiegert — Gracias por tu apoyo ❤️</p>
-  </footer>
+<script>
+  function copyBTC(btn) {
+    const address = btn.previousElementSibling.innerText;
+    navigator.clipboard.writeText(address);
+    btn.innerText = "Copiado ✓";
+    setTimeout(() => btn.innerText = "Copiar", 1500);
+  }
+</script>
 
 </body>
 </html>
