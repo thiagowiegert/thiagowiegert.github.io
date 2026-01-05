@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thiago Wiegert | Portafolio</title>
+  <title>Apoya a Thiago Wiegert</title>
+
   <style>
-    /* Reset básico */
     * {
       margin: 0;
       padding: 0;
@@ -33,12 +33,14 @@
     header p {
       font-size: 1.2em;
       color: #8b949e;
+      margin-top: 10px;
     }
 
     main {
       max-width: 800px;
       margin: 40px auto;
       padding: 0 20px;
+      text-align: center;
     }
 
     section {
@@ -53,31 +55,21 @@
       padding-bottom: 10px;
     }
 
-    .proyecto {
+    .card {
       background-color: #161b22;
-      padding: 20px;
+      padding: 25px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .btc-address {
+      background-color: #0d1117;
+      padding: 15px;
       border-radius: 8px;
-      margin-bottom: 20px;
-      transition: transform 0.3s ease;
-    }
-
-    .proyecto:hover {
-      transform: translateY(-5px);
-    }
-
-    .proyecto a {
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-
-    .proyecto h3 {
-      color: #58a6ff;
-      margin-bottom: 10px;
-    }
-
-    .proyecto p {
-      color: #8b949e;
+      word-break: break-all;
+      font-family: monospace;
+      color: #45b549;
+      margin-top: 10px;
     }
 
     footer {
@@ -101,40 +93,50 @@
 <body>
 
   <header>
-    <h1>Thiago Wiegert</h1>
-    <p>Desarrollador Web Principiante | Entusiasta de la Tecnología</p>
+    <h1>Apoya mi trabajo 💚</h1>
+    <p>Tu donación me ayuda a seguir creando proyectos y aprendiendo</p>
   </header>
 
   <main>
+
     <section>
-      <h2>Sobre mí</h2>
-      <p>Soy un desarrollador web principiante apasionado por crear páginas web que mejoren la experiencia del usuario. Me especializo en cosas básicas pero usó más la ia para mis proyectos.</p>
+      <h2>☕ Donar con Ko-fi</h2>
+      <div class="card">
+        <p>Puedes apoyarme fácilmente usando Ko-fi:</p>
+        <br>
+
+        <!-- Ko-fi Widget -->
+        <script src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script>
+        <script>
+          kofiwidget2.init(
+            'Support me on Ko-fi',
+            '#45b549',
+            'Z8Z81C0HWZ'
+          );
+          kofiwidget2.draw();
+        </script>
+      </div>
     </section>
 
     <section>
-      <h2>Proyectos</h2>
+      <h2>₿ Donar con Bitcoin</h2>
+      <div class="card">
+        <p>Puedes enviar Bitcoin a la siguiente dirección:</p>
 
-      <div class="proyecto">
-        <a href="https://minecraftfree.vercel.app" target="_blank">
-          <h3>Minecraft Free: Minecraft Gratis para Android</h3>
-          <p>Un sitio web para descargar el Minecraft totalmente gratis en android. Construido con HTML, CSS y JavaScript.</p>
-        </a>
+        <div class="btc-address">
+          bc1q45cmavzmqus6jtsjm7rhqs6n0vl5akhpw8yntn
+        </div>
+
+        <p style="margin-top: 15px; color:#8b949e;">
+          Bitcoin (BTC)
+        </p>
       </div>
-
-      <div class="proyecto">
-        <a href="https://github.com/thiagowiegert/NicoleBot-MD" target="_blank">
-          <h3>NicoleBot-MD</h3>
-          <p>Pronto</p>
-        </a>
-      </div>
-
-      <!-- Puedes seguir agregando más proyectos con el mismo formato -->
-
     </section>
+
   </main>
 
   <footer>
-    <p>© 2025 Thiago Wiegert. Todos los derechos reservados.</p>
+    <p>© 2025 - 2026 Thiago Wiegert — Gracias por tu apoyo ❤️</p>
   </footer>
 
 </body>
